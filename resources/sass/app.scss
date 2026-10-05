@@ -1,0 +1,19 @@
+@import url('https://fonts.bunny.net/css?family=Nunito:400,600,700,800');
+@import 'variables';
+@import 'bootstrap/scss/bootstrap';
+
+body { color: #1f2937; }
+.navbar-brand { letter-spacing: -.04em; font-size: 1.45rem; }
+.hero { background: linear-gradient(135deg, #c6232d 0%, #8d1720 100%); color: white; }
+.hero img { max-height: 290px; width: 100%; object-fit: cover; }
+.product-card { transition: transform .2s ease, box-shadow .2s ease; overflow: hidden; }
+.product-card:hover { transform: translateY(-4px); }
+.product-image { height: 210px; background: #f1f3f5; overflow: hidden; }
+.product-image img { width: 100%; height: 100%; object-fit: cover; }
+.product-detail-image { min-height: 390px; background: #eef0f2; overflow: hidden; }
+.stat-card { height: 100%; background: #fff; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 .25rem 1rem rgba(0,0,0,.06); display: flex; flex-direction: column; gap: .25rem; }
+.stat-card span { color: #6c757d; }
+.stat-card strong { font-size: 1.8rem; }
+.card { border-radius: 1rem; }
+.btn, .form-control, .form-select { border-radius: .7rem; }
+.table > :not(caption) > * > * { padding: 1rem; }

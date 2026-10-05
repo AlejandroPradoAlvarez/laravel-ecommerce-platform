@@ -1,0 +1,5 @@
+@extends('layouts.app')
+@section('title', 'Mis pedidos')
+@section('content')
+<div class="container py-5"><h1>Mis pedidos</h1><p class="text-secondary mb-4">Consulta el histórico y el estado de tus compras.</p>@forelse($orders as $order)<a class="card border-0 shadow-sm mb-3 text-decoration-none text-dark" href="{{ route('orders.show', $order) }}"><div class="card-body d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2"><div><strong>Pedido #{{ $order->id }}</strong><div class="text-secondary">{{ $order->created_at->format('d/m/Y H:i') }} · {{ $order->items->sum('quantity') }} artículos</div></div><div class="d-flex align-items-center gap-3"><span class="badge text-bg-secondary text-uppercase">{{ $order->status }}</span><strong class="fs-5">{{ number_format($order->total, 2, ',', '.') }} €</strong></div></div></a>@empty<div class="alert alert-info">Todavía no has realizado ningún pedido.</div>@endforelse<div class="mt-4">{{ $orders->links() }}</div></div>
+@endsection
